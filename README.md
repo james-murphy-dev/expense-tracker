@@ -1,2 +1,7 @@
 # expense-tracker
-Expense tracker Android application featuring data binding, view binding, and filtering
+Expense tracker Android application
+
+Technologies used
+* Data binding
+* View binding
+* LiveData
