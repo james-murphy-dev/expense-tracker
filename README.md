@@ -5,3 +5,5 @@ Technologies used
 * Data binding
 * View binding
 * LiveData
+
+The list filtering functionality is built in a scalable way, using a FilterOptions data class with a dateRange member, so that more filter groups can be added over time.
