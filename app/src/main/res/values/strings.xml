@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    <string name="expense_name_input_hint">Name</string>
+    <string name="expense_amount_input_hint">00.00</string>
+    <string name="preference_key">com.example.myapp.PREFERENCE_FILE_KEY</string>
+    <string name="local_currency">local_currency</string>
+    <string name="date_range_all">all</string>
+    <string name="date_range_day">day</string>
+    <string name="date_range_week">week</string>
+    <string name="date_range_month">month</string>
+    <string name="date_range_year">year</string>
+    <string name="filter_date_range">date_range</string>
+    <string name="transaction_category_hint">Category</string>
+    <string name="expense_form_title">Add an expense</string>
+    <string name="submit_btn_label">Submit</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="open_drawer">Open drawer</string>
+</resources>
