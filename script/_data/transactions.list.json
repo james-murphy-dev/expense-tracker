@@ -1,0 +1,14 @@
+[
+    {
+    "name": "Computer",
+    "date": "2020-03-04",
+    "amount": 1800.00,
+    "category": 2
+    }, 
+    {
+        "name": "Computer",
+        "date": "2020-03-04",
+        "amount": 1800.00,
+        "category": 2
+    }
+]

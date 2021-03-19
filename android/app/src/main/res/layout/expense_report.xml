@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/title"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/text_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/expense_form_title"/>
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/text_margin"
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="@string/expense_name_input_hint"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/category_input"
+        app:layout_constraintTop_toBottomOf="@id/name_input"
+        app:layout_constraintBottom_toTopOf="@id/date_select_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/transaction_category_hint"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:inputType="textCapWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/date_select_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/category_input"
+        app:layout_constraintBottom_toTopOf="@id/amount_input"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/date_icon"
+            android:src="@drawable/ic_calendar"
+            android:layout_marginStart="@dimen/text_margin"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textSize="@dimen/header_size"
+            android:id="@+id/date"
+            android:text="00-00-0000"
+            android:layout_margin="@dimen/text_margin"
+            android:layout_toEndOf="@id/date_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:textSize="18sp"
+        android:id="@+id/currency_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginBottom="@dimen/text_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_select_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <me.abhinay.input.CurrencyEditText
+        android:id="@+id/amount_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/date_select_btn"
+        app:layout_constraintStart_toEndOf="@id/currency_symbol"
+        app:layout_constraintEnd_toEndOf="@id/date_select_btn"
+        android:layout_marginBottom="@dimen/text_margin"
+        android:hint="@string/expense_amount_input_hint"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_btn"
+        android:text="@string/submit_btn_label"
+        android:backgroundTint="@color/moneylion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/text_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

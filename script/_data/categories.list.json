@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Food"
+    },
+    {
+        "id": 2,
+        "name": "Shopping"
+    },
+    {
+        "id": 3,
+        "name": "Employee Benefits"
+    },
+    {
+        "id": 4,
+        "name": "Meals"
+    },
+    {
+        "id": 5,
+        "name": "Entertainment "
+    },
+    {
+        "id": 6,
+        "name": "Health"
+    },
+    {
+        "id": 7,
+        "name": "Transportation"
+    },
+    {
+        "id": 8,
+        "name": "Education"
+    },
+    {
+        "id": 9,
+        "name": "Home"
+    }
+]
