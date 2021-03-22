@@ -80,7 +80,7 @@ class ExpenseDialog: DialogFragment() {
 
     private fun setupClickListener(view: View) {
         val dialog = DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
-            selectedDate = LocalDate.of(year, month, dayOfMonth)
+            selectedDate = LocalDate.of(year, month+1, dayOfMonth)
             dateText.text = getFormattedDate()
 
         }, selectedDate.year, selectedDate.monthValue, selectedDate.dayOfMonth)
