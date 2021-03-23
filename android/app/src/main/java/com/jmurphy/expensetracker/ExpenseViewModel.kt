@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.lifecycle.*
 import com.jmurphy.expensetracker.data.*
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.util.*
@@ -113,19 +114,19 @@ class ExpenseViewModel(val context: Application): AndroidViewModel(context) {
     }
 
     fun createExpense(expense: Expense) {
-        CompletableFuture.runAsync{
+        viewModelScope.launch {
             expensesRepo.createExpense(expense)
         }
     }
 
     fun createExpense(category: String, expense: Expense) {
-        CompletableFuture.runAsync{
+        viewModelScope.launch {
             expense.category = createCategory(category)
             expensesRepo.createExpense(expense)
         }
     }
 
-    private fun createCategory(name: String): Category {
+    private suspend fun createCategory(name: String): Category {
         val id = expensesRepo.createCategory(
             Category(
                 name

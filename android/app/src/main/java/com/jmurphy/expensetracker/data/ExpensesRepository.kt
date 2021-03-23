@@ -19,15 +19,15 @@ class ExpensesRepository(context: Context) {
         return db.categoryDao().getAll()
     }
 
-    fun createExpense(expense: Expense): Long {
+    suspend fun createExpense(expense: Expense): Long {
         return db.expenseDao().insert(expense)
     }
 
-    fun createCategory(category: Category): Long{
+    suspend fun createCategory(category: Category): Long{
         return db.categoryDao().insert(category)
     }
 
-    fun getCategory(id: Long): Category {
+    suspend fun getCategory(id: Long): Category {
         return db.categoryDao().findById(id);
     }
 }

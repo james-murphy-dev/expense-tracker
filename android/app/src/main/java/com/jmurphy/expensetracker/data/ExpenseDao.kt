@@ -17,11 +17,11 @@ interface ExpenseDao {
     fun loadAllByIds(ids: IntArray): List<Expense>
 
     @Insert
-    fun insert(expense: Expense): Long
+    suspend fun insert(expense: Expense): Long
 
     @Insert
-    fun insertAll(vararg expenses: Expense)
+    suspend fun insertAll(vararg expenses: Expense)
 
     @Delete
-    fun delete(user: Expense)
+    suspend fun delete(user: Expense)
 }
