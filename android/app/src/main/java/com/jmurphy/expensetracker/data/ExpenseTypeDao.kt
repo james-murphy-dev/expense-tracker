@@ -16,14 +16,14 @@ interface ExpenseTypeDao {
     fun loadAllByIds(ids: IntArray): List<Category>
 
     @Insert
-    fun insert(category: Category): Long
+    suspend fun insert(category: Category): Long
 
     @Insert
-    fun insertAll(vararg categories: Category)
+    suspend fun insertAll(vararg categories: Category)
 
     @Delete
-    fun delete(user: Category)
+    suspend fun delete(user: Category)
 
     @Query("SELECT * FROM category WHERE uid=:id LIMIT 1")
-    fun findById(id: Long): Category
+    suspend fun findById(id: Long): Category
 }
